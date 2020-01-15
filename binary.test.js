@@ -9,6 +9,5 @@ describe('The binary function', () => {
 	it('Should be equal to the sum of arguments passed', () => {
 		let result = binary(56,67);
 		expect(result).toBe(123);
-		
 	});
 });
