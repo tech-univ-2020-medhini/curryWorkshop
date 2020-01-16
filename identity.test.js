@@ -9,7 +9,7 @@ describe('The identity function', () => {
 		result = identity([1,2,3]);
 		expect(typeof result).toBe('object');
 	});
-	it('Should be equal to the argument passed', () => {
+	it('Should return the argument passed', () => {
 		let result = identity(56);
 		expect(result).toBe(56);
 		result = identity('Hello');

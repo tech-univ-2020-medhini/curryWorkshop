@@ -1,6 +1,6 @@
 const call = require('./callApply');
 
-const update = function(name, age, tShirtSize) {
+let update = function(name, age, tShirtSize) {
 	this.name = name;
 	this.age = age;
 	this.tShirtSize = tShirtSize;
@@ -13,11 +13,12 @@ describe('The written function', () => {
 		expect(typeof result).toBe('undefined');
 	});
 	it('Should run the function that is passed', () => {
+		update = jest.fn();
 		call(update, person, 'Sharma', 29, 'XL');
 		expect(update).toBeCalledTimes(1);
 	});
 	it('Should appy the function that is passed onto the object', () => {
 		call(update, person, 'Sharma', 29, 'XL');
-		expect(person).toBe({ name: 'Sharma', age: 29, tShirtSize: 'XL' });
+		expect(person).toEqual({ name: 'Sharma', age: 29, tShirtSize: 'XL' });
 	});
 });
