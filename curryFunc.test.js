@@ -23,16 +23,16 @@ describe('The  output function', () => {
 	it('Should return the sum of arguments if three arguments are passed', () => {
 		let result = curry(adder);
 		let result1 = result(56,76,87);
-		expect(result1).toBe(210);
+		expect(result1).toBe(219);
 		expect(typeof result1).toBe('number');
 	});
 	it('Should return the sum of all three arguments even if passed later', () => {
 		let result = curry(adder);
 		let result1 = result(56,76)(87);
-		expect(result1).toBe(210);
+		expect(result1).toBe(219);
 		result1 = result(56)(76,87);
-		expect(result1).toBe(210);
+		expect(result1).toBe(219);
 		result1 = result(56)(76)(87);
-		expect(result1).toBe(210);
+		expect(result1).toBe(219);
 	});
 });
