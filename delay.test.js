@@ -5,14 +5,6 @@ describe('The delay function', () => {
 		let result = delay(56);
 		expect(typeof result).toBe('function');
 	});
-	it('Should be equal to the argument passed', () => {
-		let result = delay(56);
-		expect(result).toBe(56);
-		result = delay('Hello');
-		expect(result).toBe('Hello');
-		result = delay([1,2,3]);
-		expect(result).toEqual([1,2,3]);
-	});
 });
 describe('The output function ', ()=> {
 	it('Should return a vaue of type number', () => {
